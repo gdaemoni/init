@@ -1,0 +1,7 @@
+1) useradd newuser
+2) passwd newuser
+
+ГРАФИЧЕСКАЯ СЕССИЯ : Ввести логин и пароль
+
+SSH : ssh newuser@host -p port
+	Затем ввести пароль

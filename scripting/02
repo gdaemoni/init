@@ -1,0 +1,20 @@
+#!/bin/bash
+
+USER=$1
+UID=$(cat /etc/passwd | grep $USER | awk -F : '{print $3}')
+
+if [ "$USER" = "root" ]
+then
+	read -p "Are you sure you want to delete a Super User? IT MAY CRASH YOUR KERNEL! [Y/n] : " DARE;
+else
+	DARE="Y"
+fi
+
+if [ "DARE" = "Y" ]
+then
+	sudo passwd --lock $USER
+	sudo pkill -U $UID
+	sudo userdel -r $USER
+else
+	echo "user delete is canceled"
+fi;

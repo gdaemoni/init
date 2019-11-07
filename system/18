@@ -1,0 +1,3 @@
+pkill ssh/sshd
+
+# sudo service sshd/ssh stop

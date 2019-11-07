@@ -1,0 +1,6 @@
+#	traceroute Вывод маршрута передачи пакетов хосту в сети
+#	-n отключает обратный DNS запрос что ускоряет мониоринг
+#
+#	https://www.8host.com/blog/ispolzovanie-traceroute-i-mtr-dlya-diagnostiki-seti/
+
+traceroute -q1 slash16.org
